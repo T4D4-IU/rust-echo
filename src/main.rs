@@ -22,5 +22,5 @@ fn main() {
 
     let text = matches.values_of_lossy("text").unwrap(); // values_of_lossyはOption<Vec<String>>を返す unwrapで中身を取り出す
     let omit_newline = matches.is_present("omit_newline"); // omit_newlineが指定されたかどうか boolで返す
-    print!("{}{}", text.join(" "), if omit_newline { "" } else { "\n" };); // joinでVec<String>をStringに変換して出力 末尾に改行を出力するかどうかを判別するif式はここでしか使わないので変数に代入せず直接書いている
+    print!("{}{}", text.join(" "), if omit_newline { "" } else { "\n" }); // joinでVec<String>をStringに変換して出力 末尾に改行を出力するかどうかを判別するif式はここでしか使わないので変数に代入せず直接書いている
 }
